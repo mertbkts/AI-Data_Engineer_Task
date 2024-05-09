@@ -1,0 +1,19 @@
+[2024-05-09T10:38:17.423+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T10:38:17.449+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: friday_dag.friday_run_database_task manual__2024-05-09T10:38:14.540242+00:00 [queued]>
+[2024-05-09T10:38:17.456+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: friday_dag.friday_run_database_task manual__2024-05-09T10:38:14.540242+00:00 [queued]>
+[2024-05-09T10:38:17.457+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-09T10:38:17.467+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): friday_run_database_task> on 2024-05-09 10:38:14.540242+00:00
+[2024-05-09T10:38:17.471+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2797) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T10:38:17.471+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'friday_dag', 'friday_run_database_task', 'manual__2024-05-09T10:38:14.540242+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/single_dag.py', '--cfg-path', '/tmp/tmpzi2dfyye']
+[2024-05-09T10:38:17.472+0000] {standard_task_runner.py:63} INFO - Started process 2798 to run task
+[2024-05-09T10:38:17.473+0000] {standard_task_runner.py:91} INFO - Job 73: Subtask friday_run_database_task
+[2024-05-09T10:38:17.486+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T10:38:17.516+0000] {task_command.py:426} INFO - Running <TaskInstance: friday_dag.friday_run_database_task manual__2024-05-09T10:38:14.540242+00:00 [running]> on host 5d069ed3d57a
+[2024-05-09T10:38:17.590+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='friday_dag' AIRFLOW_CTX_TASK_ID='friday_run_database_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T10:38:14.540242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T10:38:14.540242+00:00'
+[2024-05-09T10:38:17.591+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T10:38:17.619+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T10:38:17.620+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T10:38:17.629+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=friday_dag, task_id=friday_run_database_task, run_id=manual__2024-05-09T10:38:14.540242+00:00, execution_date=20240509T103814, start_date=20240509T103817, end_date=20240509T103817
+[2024-05-09T10:38:17.646+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T10:38:17.660+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T10:38:17.662+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

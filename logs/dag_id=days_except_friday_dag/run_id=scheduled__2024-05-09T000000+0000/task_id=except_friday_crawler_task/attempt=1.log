@@ -1,0 +1,59 @@
+[2024-05-09T09:13:41.600+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T09:13:41.634+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T09:13:41.642+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T09:13:41.643+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-09T09:13:41.655+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): except_friday_crawler_task> on 2024-05-09 00:00:00+00:00
+[2024-05-09T09:13:41.661+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=284) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T09:13:41.661+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'days_except_friday_dag', 'except_friday_crawler_task', 'scheduled__2024-05-09T00:00:00+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/single_dag.py', '--cfg-path', '/tmp/tmp7_de2x47']
+[2024-05-09T09:13:41.662+0000] {standard_task_runner.py:63} INFO - Started process 290 to run task
+[2024-05-09T09:13:41.662+0000] {standard_task_runner.py:91} INFO - Job 55: Subtask except_friday_crawler_task
+[2024-05-09T09:13:41.678+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T09:13:41.715+0000] {task_command.py:426} INFO - Running <TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [running]> on host 5d069ed3d57a
+[2024-05-09T09:13:41.800+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='days_except_friday_dag' AIRFLOW_CTX_TASK_ID='except_friday_crawler_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-09T00:00:00+00:00'
+[2024-05-09T09:13:41.801+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T09:13:41.813+0000] {single_dag.py:49} INFO - This is an informational message
+[2024-05-09T09:13:42.649+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T09:13:42.650+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T09:13:42.666+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=days_except_friday_dag, task_id=except_friday_crawler_task, run_id=scheduled__2024-05-09T00:00:00+00:00, execution_date=20240509T000000, start_date=20240509T091341, end_date=20240509T091342
+[2024-05-09T09:13:42.718+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T09:13:42.740+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T09:13:42.743+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-09T17:14:09.666+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T17:14:09.707+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T17:14:09.718+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T17:14:09.719+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-09T17:14:09.735+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): except_friday_crawler_task> on 2024-05-09 00:00:00+00:00
+[2024-05-09T17:14:09.745+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=251) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T17:14:09.744+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'days_except_friday_dag', 'except_friday_crawler_task', 'scheduled__2024-05-09T00:00:00+00:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/single_dag.py', '--cfg-path', '/tmp/tmpzh3emaj9']
+[2024-05-09T17:14:09.746+0000] {standard_task_runner.py:63} INFO - Started process 256 to run task
+[2024-05-09T17:14:09.747+0000] {standard_task_runner.py:91} INFO - Job 184: Subtask except_friday_crawler_task
+[2024-05-09T17:14:09.775+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T17:14:09.824+0000] {task_command.py:426} INFO - Running <TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [running]> on host 2ac721f319c6
+[2024-05-09T17:14:09.970+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='days_except_friday_dag' AIRFLOW_CTX_TASK_ID='except_friday_crawler_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-09T00:00:00+00:00'
+[2024-05-09T17:14:09.971+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T17:14:10.005+0000] {single_dag.py:49} INFO - This is an informational message
+[2024-05-09T17:14:11.141+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T17:14:11.144+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T17:14:11.241+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=days_except_friday_dag, task_id=except_friday_crawler_task, run_id=scheduled__2024-05-09T00:00:00+00:00, execution_date=20240509T000000, start_date=20240509T171409, end_date=20240509T171411
+[2024-05-09T17:14:11.316+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T17:14:11.390+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-05-09T18:32:03.561+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T18:32:03.753+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T18:32:03.777+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [queued]>
+[2024-05-09T18:32:03.779+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-09T18:32:03.934+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): except_friday_crawler_task> on 2024-05-09 00:00:00+00:00
+[2024-05-09T18:32:03.941+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=384) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T18:32:03.942+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'days_except_friday_dag', 'except_friday_crawler_task', 'scheduled__2024-05-09T00:00:00+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/single_dag.py', '--cfg-path', '/tmp/tmp8z8gu16q']
+[2024-05-09T18:32:03.945+0000] {standard_task_runner.py:91} INFO - Job 38: Subtask except_friday_crawler_task
+[2024-05-09T18:32:03.945+0000] {standard_task_runner.py:63} INFO - Started process 393 to run task
+[2024-05-09T18:32:04.105+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T18:32:04.424+0000] {task_command.py:426} INFO - Running <TaskInstance: days_except_friday_dag.except_friday_crawler_task scheduled__2024-05-09T00:00:00+00:00 [running]> on host def55370f167
+[2024-05-09T18:32:05.065+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='days_except_friday_dag' AIRFLOW_CTX_TASK_ID='except_friday_crawler_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-05-09T00:00:00+00:00'
+[2024-05-09T18:32:05.068+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T18:32:05.083+0000] {single_dag.py:49} INFO - This is an informational message
+[2024-05-09T18:32:05.884+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-09T18:32:05.885+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T18:32:05.924+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=days_except_friday_dag, task_id=except_friday_crawler_task, run_id=scheduled__2024-05-09T00:00:00+00:00, execution_date=20240509T000000, start_date=20240509T183203, end_date=20240509T183205
+[2024-05-09T18:32:06.193+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-09T18:32:06.331+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T18:32:06.339+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

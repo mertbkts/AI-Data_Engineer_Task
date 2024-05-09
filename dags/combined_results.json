@@ -1,0 +1,38 @@
+[
+    {
+        "term": "election",
+        "incidence": 1,
+        "site": "ft",
+        "timestamp": "2024-05-09T18:35:01.980248"
+    },
+    {
+        "term": "war",
+        "incidence": 1,
+        "site": "ft",
+        "timestamp": "2024-05-09T18:35:01.980539"
+    },
+    {
+        "term": "economy",
+        "incidence": 0,
+        "site": "ft",
+        "timestamp": "2024-05-09T18:35:01.980782"
+    },
+    {
+        "term": "election",
+        "incidence": 1,
+        "site": "tg",
+        "timestamp": "2024-05-09T18:35:02.366169"
+    },
+    {
+        "term": "war",
+        "incidence": 3,
+        "site": "tg",
+        "timestamp": "2024-05-09T18:35:02.366627"
+    },
+    {
+        "term": "economy",
+        "incidence": 0,
+        "site": "tg",
+        "timestamp": "2024-05-09T18:35:02.367026"
+    }
+]

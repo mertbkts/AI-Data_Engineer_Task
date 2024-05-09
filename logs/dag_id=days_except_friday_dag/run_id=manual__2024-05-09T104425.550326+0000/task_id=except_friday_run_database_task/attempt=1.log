@@ -1,0 +1,47 @@
+[2024-05-09T10:44:27.880+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-09T10:44:27.906+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_run_database_task manual__2024-05-09T10:44:25.550326+00:00 [queued]>
+[2024-05-09T10:44:27.913+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: days_except_friday_dag.except_friday_run_database_task manual__2024-05-09T10:44:25.550326+00:00 [queued]>
+[2024-05-09T10:44:27.914+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-09T10:44:27.925+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): except_friday_run_database_task> on 2024-05-09 10:44:25.550326+00:00
+[2024-05-09T10:44:27.929+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2995) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-05-09T10:44:27.929+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'days_except_friday_dag', 'except_friday_run_database_task', 'manual__2024-05-09T10:44:25.550326+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/single_dag.py', '--cfg-path', '/tmp/tmp0m8yeytd']
+[2024-05-09T10:44:27.930+0000] {standard_task_runner.py:63} INFO - Started process 2996 to run task
+[2024-05-09T10:44:27.930+0000] {standard_task_runner.py:91} INFO - Job 77: Subtask except_friday_run_database_task
+[2024-05-09T10:44:27.944+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-05-09T10:44:27.975+0000] {task_command.py:426} INFO - Running <TaskInstance: days_except_friday_dag.except_friday_run_database_task manual__2024-05-09T10:44:25.550326+00:00 [running]> on host 5d069ed3d57a
+[2024-05-09T10:44:28.049+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='days_except_friday_dag' AIRFLOW_CTX_TASK_ID='except_friday_run_database_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-09T10:44:25.550326+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-09T10:44:25.550326+00:00'
+[2024-05-09T10:44:28.050+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-09T10:44:28.067+0000] {logging_mixin.py:188} INFO - Successfully deleted table 'incidence_table'
+[2024-05-09T10:44:28.073+0000] {logging_mixin.py:188} INFO - Successfully created table 'incidence_table'
+[2024-05-09T10:44:28.082+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-09T10:44:28.082+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/single_dag.py", line 117, in insert_data_to_table
+    timestamp = datetime.strptime(item["timestamp"], "%Y-%m-%d")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/_strptime.py", line 336, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains: T10:44:26.541998
+[2024-05-09T10:44:28.096+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=days_except_friday_dag, task_id=except_friday_run_database_task, run_id=manual__2024-05-09T10:44:25.550326+00:00, execution_date=20240509T104425, start_date=20240509T104427, end_date=20240509T104428
+[2024-05-09T10:44:28.107+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 77 for task except_friday_run_database_task (unconverted data remains: T10:44:26.541998; 2996)
+[2024-05-09T10:44:28.144+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-09T10:44:28.159+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-09T10:44:28.161+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
